@@ -12,7 +12,7 @@ const MyPurchases = () => {
     const { email } = user;
 
     useEffect(() => {
-        fetch(`http://localhost:5000/purchases/${email}`)
+        fetch(`https://whispering-mesa-69203.herokuapp.com/purchases/${email}`)
             .then(res => res.json())
             .then(data => setPurchases(data))
     }, [email])
@@ -29,7 +29,7 @@ const MyPurchases = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                const url = `http://localhost:5000/purchases/${id}`;
+                const url = `https://whispering-mesa-69203.herokuapp.com/purchases/${id}`;
                 fetch(url, {
                     method: 'DELETE',
                 })

@@ -10,7 +10,7 @@ const AddProduct = () => {
 
     const onSubmit = data => {
         data.email = user?.email;
-        fetch('http://localhost:5000/products', {
+        fetch('https://whispering-mesa-69203.herokuapp.com/products', {
             method: 'POST',
             headers: {
                 "content-type": "application/json"

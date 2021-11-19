@@ -8,7 +8,7 @@ const ManageProducts = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://whispering-mesa-69203.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [])
@@ -25,7 +25,7 @@ const ManageProducts = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                const url = `http://localhost:5000/products/${id}`;
+                const url = `https://whispering-mesa-69203.herokuapp.com/products/${id}`;
                 fetch(url, {
                     method: 'DELETE',
                 })

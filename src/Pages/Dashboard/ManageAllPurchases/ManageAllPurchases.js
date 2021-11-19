@@ -10,7 +10,7 @@ const ManageAllPurchases = () => {
     const [managePurchases, setManagePurchases] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/purchases')
+        fetch('https://whispering-mesa-69203.herokuapp.com/purchases')
             .then(res => res.json())
             .then(data => setManagePurchases(data))
     }, [shippingConfirm])
@@ -26,7 +26,7 @@ const ManageAllPurchases = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                const url = `http://localhost:5000/purchases/${id}`;
+                const url = `https://whispering-mesa-69203.herokuapp.com/purchases/${id}`;
                 fetch(url, {
                     method: 'DELETE',
                 })
@@ -58,7 +58,7 @@ const ManageAllPurchases = () => {
             confirmButtonText: 'Yes, Confirm!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/purchases/${id}`, {
+                fetch(`https://whispering-mesa-69203.herokuapp.com/purchases/${id}`, {
                     method: 'PUT',
                 })
                     .then(res => res.json())
