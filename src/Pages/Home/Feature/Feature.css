@@ -1,0 +1,40 @@
+.featured-item {
+  cursor: pointer;
+  transition: all 0.9s;
+}
+.feature-img {
+  overflow: hidden;
+}
+
+.feature-img img {
+  cursor: zoom-in;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.9s ease;
+}
+
+.feature-img img:hover {
+  transform: scale(1.2);
+}
+
+.featured-item:hover {
+  box-shadow: 0 0 20px #0d6efd;
+}
+
+.featured-item:hover .item-detail {
+  background-color: #e3edfc;
+}
+
+.img-container {
+  position: relative;
+}
+.img-text {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #e3edfc;
+  color: red;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 3px;
+}

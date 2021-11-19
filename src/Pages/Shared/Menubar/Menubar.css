@@ -1,0 +1,11 @@
+.navigation-bar {
+  box-shadow: 0 0 20px rgb(37, 37, 39);
+}
+
+.nav-menu {
+  transition: all 0.9s;
+}
+
+.nav-menu:hover {
+  color: black !important;
+}
